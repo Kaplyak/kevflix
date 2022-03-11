@@ -4,11 +4,11 @@ import Topbar from '../../../components/ui/Topbar';
 
 export default function detail(props) {
 
-    console.log(props)
+    console.log(props);
 
     return <>
         <div className='w-32'>
-            <Image src={`https://image.tmdb.org/t/p/original/${props.details.backdrop_path}`} width='1920' height='1080' layout='fill' objectFit='fill' />
+            <Image src={`https://image.tmdb.org/t/p/original/${props.details.backdrop_path}`} layout='fill' objectFit='fill' />
             <div className="bg">
                 <Topbar />
                 <div className="ml-20 mt-60 relative text-white">
@@ -41,7 +41,7 @@ export default function detail(props) {
 export async function getStaticPaths() {
     let moviePathsIds = [];
 
-    fetch('https://api.themoviedb.org/3/movie/popular?api_key=b0064151a9c09591ea5478a2ea2cc8f7&language=en-US&page=1')
+    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}&language=en-US&page=1`)
     .then(res => res.json())
     .then(data => {
         for (let i = 0; i < data.length; i++) {
@@ -57,8 +57,8 @@ export async function getStaticPaths() {
 
 
 export async function getStaticProps(context) {
-    const res = await fetch(`https://api.themoviedb.org/3/movie/${context.params.id}?api_key=b0064151a9c09591ea5478a2ea2cc8f7`)
+    const res = await fetch(`https://api.themoviedb.org/3/movie/${context.params.id}?api_key=${process.env.API_KEY}`)
     const details = await res.json()
 
-    return {props: {details}}
+    return { props: { details } }
 }
