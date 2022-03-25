@@ -10,10 +10,11 @@ export default function movies(props) {
     })
 
     let keys = Object.keys(props);
+    let randomItem = null;
     if (keys != undefined) {
         let randomCategory = props[keys[ keys.length * Math.random() << 0 ]].results;
         if (randomCategory != undefined) {
-            let randomItem = randomCategory[Math.floor(randomCategory.length * Math.random())];
+            randomItem = randomCategory[Math.floor(randomCategory.length * Math.random())];
         }
     }
     
