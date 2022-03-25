@@ -58,7 +58,7 @@ export default function movies(props) {
 
 
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
     const resLatestMovies = await fetch(` https://api.themoviedb.org/3/movie/latest?api_key=${process.env.API_KEY}&language=en-US`);
     const latestMovies = await resLatestMovies.json();
     latestMovies.id = 4;
