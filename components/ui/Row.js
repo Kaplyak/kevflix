@@ -60,7 +60,7 @@ export default function Row({row, content}) {
             return <></>
         }
         return (
-            <SwiperSlide>
+            <SwiperSlide key={movie.id}>
                 <Item key={movie.id} props={movie} content={content} />
             </SwiperSlide>
         )

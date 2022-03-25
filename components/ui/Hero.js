@@ -15,8 +15,8 @@ export default function Hero() {
                     <h3 className="text-lg">Ready to watch? Enter your email to create or restart your membership.</h3>
                     <input className="py-5 px-5 text-black my-2" placeholder="Email"></input>
                     <button className="bg-red-600 px-5 py-5">Get started &gt;</button>
-                    <Link>
-                        <a href="/new" className="block w-1/3 mx-auto mt-2 bg-red-600 px-5 py-2 rounded-md">Browse content</a>
+                    <Link href="/new">
+                        <a className="block w-1/3 mx-auto mt-2 bg-red-600 px-5 py-2 rounded-md">Browse content</a>
                     </Link>
                 </form>
             </div>
