@@ -17,23 +17,26 @@ import 'swiper/css';
 
 export default function Row({row, content}) {
 
-
+    /*
     if (typeof window !== 'undefined') {
         const { width } = useViewport();
     }
     else {
         return null;
     }
+    */
 
     // Swiper config
 
     const customSwiperParams = {
         observer: true,
         observeParents: true,
+        /*
         navigation: {
             prevEl: navigationPrevRef.current,
             nextEl: navigationNextRef.current,
         },
+        */
         breakpoints: {
             1378: { slidesPerView: 6, slidesPerGroup: 6 },
             998: { slidesPerView: 4, slidesPerGroup: 4 },            
@@ -41,7 +44,7 @@ export default function Row({row, content}) {
             330: { slidesPerView: 2, slidesPerGroup: 2 },            
             0: { slidesPerView: 1.5, slidesPerGroup: 1 },            
         },
-        loopAdditionalSlides: width >= 1378 ? 5 : width >= 998 ? 3 : width >= 625 ? 2 : 2,
+        // loopAdditionalSlides: width >= 1378 ? 5 : width >= 998 ? 3 : width >= 625 ? 2 : 2,
         pagination: true,
         loop: false,
         grabCursor: false,
@@ -74,10 +77,6 @@ export default function Row({row, content}) {
                 <div className="overflow-hidden">
                     <Swiper
                         {...customSwiperParams}
-                        onBeforeInit={(swiper) => {
-							swiper.params.navigation.prevEl = navigationPrevRef.current;
-							swiper.params.navigation.nextEl = navigationNextRef.current;
-						}}    
                     >
                         {movies}
                     </Swiper>
