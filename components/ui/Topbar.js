@@ -13,10 +13,18 @@ export default function Topbar(props) {
             </Link>
             
             <ul className="flex text-white text-md lg:text-lg justify-center ml-6">
-                <li className='mx-3'><a href='/'>Home</a></li>
-                <li className='mx-3'><a href='/movies'>Movies</a></li>
-                <li className='mx-3'><a href='/tv'>TV</a></li>
-                <li className='mx-3'><a href='/new'>New</a></li>
+                <li className='mx-3'>
+                    <Link href='/'>Home</Link>
+                </li>
+                <li className='mx-3'>
+                    <Link href='/movies'>Movies</Link>
+                </li>
+                <li className='mx-3'>
+                    <Link href='/tv'>TV</Link>
+                </li>
+                <li className='mx-3'>
+                    <Link href='/new'>New</Link>
+                </li>
             </ul>
             <div className='flex text-white ml-auto'>
 
