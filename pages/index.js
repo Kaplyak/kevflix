@@ -5,6 +5,7 @@ import Hero from '../components/ui/Hero';
 import HomeSections from '../components/ui/HomeSections';
 import HomeFAQ from '../components/ui/HomeFAQ';
 import Footer from '../components/ui/Footer';
+import Bottom from '../components/ui/Bottom';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <HomeSections />
         <HomeFAQ />
         <Footer />
+        <Bottom />
       </main>
     </div>
   )

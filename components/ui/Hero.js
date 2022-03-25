@@ -7,7 +7,7 @@ export default function Hero() {
                 <Logo width="180" />
                 <button className="bg-red-600 px-5 py-2 rounded-md">Sign in</button>
             </div>
-            <div className="container mx-auto flex flex-col text-center py-48">
+            <div className="container mx-auto flex flex-col text-center py-20 lg:py-48">
                 <h1 className="text-5xl py-5">Unlimited movies, TV shows, and more.</h1>
                 <h2 className="text-2xl">Watch anywhere. Cancel anytime.</h2>
                 <form className="pt-5">
