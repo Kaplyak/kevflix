@@ -1,3 +1,4 @@
+/*
 import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -7,6 +8,7 @@ import Link from 'next/link';
 import { Layout } from '../../components/account/Layout';
 import { userService } from '../../services/user.service';
 import { alertService } from '../../services/alert.service';
+*/
 
 import Logo from '../../components/ui/Logo';
 import Footer from '../../components/ui/Footer';
