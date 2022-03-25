@@ -82,14 +82,14 @@ export default function Row({row, content}) {
 	}
 
     // Swiper config end
-    
+
     const movies = row.results.map((movie) => {
 
         if (!movie.backdrop_path) {
             return <></>
         }
         return (
-            <SwiperSlide            >
+            <SwiperSlide>
                 <Item props={movie} content={content} />
             </SwiperSlide>
         )
