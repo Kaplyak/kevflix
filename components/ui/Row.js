@@ -25,9 +25,6 @@ export default function Row({row, content}) {
         return null;
     }
 
-    const navigationPrevRef = useRef(null);
-    const navigationNextRef = useRef(null);
-
     // Swiper config
 
     const customSwiperParams = {
@@ -54,32 +51,6 @@ export default function Row({row, content}) {
         slideToClickedSlide: false,
         allowTouchMove: true
     };
-    const rightMouseOver = (e) => {
-        if (e.currentTarget.classList.contains('right')) {e.currentTarget.parentElement.classList.add('is-right')}
-        else if (e.currentTarget.classList.contains('left')) {e.currentTarget.parentElement.classList.add('is-left')}
-    }
-
-    const rightMouseOut = (e) => {
-        e.currentTarget.parentElement.classList.remove('is-right', 'is-left')
-    }
-
-    const insertPositionClassName = (index) => {
-		const i = index + 1
-
-		if (i === 1) return 'left'
-		else if (i === 20) return 'right'
-
-		if (width >= 1378) {
-			if ([7, 13, 19].includes(i)) return 'left'
-			else if ([6, 12, 18].includes(i)) return 'right'
-		} else if (width >= 998) {
-			if ([5, 9, 13, 17].includes(i)) return 'left'
-			else if ([4, 8, 12, 16].includes(i)) return 'right'
-		} else if (width >= 768) {
-			if ([4, 7, 10, 13, 16].includes(i)) return 'left'
-			else if ([3, 6, 9, 12, 15, 18].includes(i)) return 'right'
-		}
-	}
 
     // Swiper config end
 
@@ -90,7 +61,7 @@ export default function Row({row, content}) {
         }
         return (
             <SwiperSlide>
-                <Item props={movie} content={content} />
+                <Item key={movie.id} props={movie} content={content} />
             </SwiperSlide>
         )
     })
