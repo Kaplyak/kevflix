@@ -12,6 +12,7 @@ import Logo from '../../components/ui/Logo';
 import Footer from '../../components/ui/Footer';
 
 export default function Register() {
+    /*
     const router = useRouter();
 
     // form validation rules 
@@ -36,7 +37,7 @@ export default function Register() {
             })
             .catch(alertService.error);
     }
-
+    */
     return(
         <>
             <div className="h-screeen bg-cover" style={{"backgroundImage": "url(https://assets.nflxext.com/ffe/siteui/vlv3/eb482c64-e879-4e88-9ddc-d839cb7d1232/f370981b-4b5f-4af6-8006-cce900a0fd25/DE-en-20220131-popsignuptwoweeks-perspective_alpha_website_large.jpg)"}}>
@@ -46,14 +47,14 @@ export default function Register() {
                 <div className="flex items-center justify-center py-20">
                     <div className="flex flex-col justify-center bg-rgba-black px-20 pt-20 pb-40 rounded">
                         <h1 className="text-white text-4xl mb-10">Register</h1>
-                        <form className="opacity-100" onSubmit={handleSubmit(onSubmit)}>
+                        <form className="opacity-100" /*onSubmit={handleSubmit(onSubmit)} */>
                             <div className="mb-4">
                                 <input 
                                     className="bg-zinc-700 pl-2 py-2 rounded" 
                                     placeholder="Username"
                                     name="username"
                                     type="text"
-                                    {...register("username")}
+                                    // {...register("username")}
                                 ></input>
                             </div>
                             <div className="mb-4">
@@ -62,12 +63,12 @@ export default function Register() {
                                     placeholder="Password"
                                     name="password"
                                     type="password"
-                                    {...register("password")}
+                                    // {...register("password")}
                                 ></input>
                             </div>
                             <button 
                                 className="bg-red-600 text-white mt-5 px-5 py-2 rounded-md w-full"
-                                disabled={formState.isSubmitting}    
+                                // disabled={formState.isSubmitting}    
                             >
                                 Register
                             </button>
