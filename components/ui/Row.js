@@ -16,6 +16,15 @@ import 'swiper/css';
 
 
 export default function Row({row, content}) {
+
+
+    if (typeof window !== 'undefined') {
+        const { width } = useViewport();
+    }
+    else {
+        return null;
+    }
+
     const navigationPrevRef = useRef(null);
     const navigationNextRef = useRef(null);
 
@@ -73,7 +82,7 @@ export default function Row({row, content}) {
 	}
 
     // Swiper config end
-
+    
     const movies = row.results.map((movie) => {
 
         if (!movie.backdrop_path) {

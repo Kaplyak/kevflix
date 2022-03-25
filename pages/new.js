@@ -26,8 +26,6 @@ export default function movies(props) {
                         <p className="overview mb-2">{randomItem.overview}</p>
                         <p className="runtime">Episode runtime: {randomItem.episode_run_time} minutes</p>
                         <p className="score">Rating: {randomItem.vote_average}</p>
-                        <p className="mt-2">Seasons: {randomItem.number_of_seasons}</p>
-                        <p className="">Episodes: {randomItem.number_of_episodes}</p>
                         <div className="flex items-center justify-items-center mt-10">
                             <a className="text-white inline-flex items-center justify-items-center bg-red-600 px-5 py-2 rounded-md">
                                 <svg stroke="currentColor" fill="white" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg>
