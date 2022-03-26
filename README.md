@@ -27,10 +27,10 @@ Finally, I deployed this project on **Vercel** to have an easy solution for Cont
 
 ## Features
 
-:heavy_check_mark: &nbsp;&nbsp;Display movies and TV shows by categories, including: trending, popular, upcoming, action, animation, drama, romance, etc.
-:heavy_check_mark: &nbsp;&nbsp;Connection with TMDB API on user request, thanks to NextJS' getServerSideProps.
-:heavy_check_mark: &nbsp;&nbsp;Fully responsive.
-:heavy_check_mark: &nbsp;&nbsp;Swipeable movie/shows rows.
+:heavy_check_mark: &nbsp;&nbsp;Display movies and TV shows by categories, including: trending, popular, upcoming, action, animation, drama, romance, etc.<br/>
+:heavy_check_mark: &nbsp;&nbsp;Connection with TMDB API on user request, thanks to NextJS' getServerSideProps.<br/>
+:heavy_check_mark: &nbsp;&nbsp;Fully responsive.<br/>
+:heavy_check_mark: &nbsp;&nbsp;Swipeable movie/shows rows.<br/>
 :heavy_check_mark: &nbsp;&nbsp;CI implementation with Vercel deployment.
 
 ## To-do list
