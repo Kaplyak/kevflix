@@ -6,8 +6,6 @@ import Bottom from "../components/ui/Bottom";
 
 export default function movies(props) {
 
-    console.log(props);
-
     let keys = Object.keys(props);
     let randomCategory = props[keys[ keys.length * Math.random() << 0 ]].results;
     let randomItem = randomCategory[Math.floor(randomCategory.length * Math.random())];
