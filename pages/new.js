@@ -5,9 +5,8 @@ import Row from "../components/ui/Row";
 import Bottom from "../components/ui/Bottom";
 
 export default function movies(props) {
-    let rows = Object.entries(props).map((prop) => {
-        return <Row key={prop[1].id} row={prop[1]} content={'movie'} />;
-    })
+
+    console.log(props);
 
     let keys = Object.keys(props);
     let randomCategory = props[keys[ keys.length * Math.random() << 0 ]].results;
@@ -45,7 +44,6 @@ export default function movies(props) {
     <div className="ml-5 lg:ml-20 relative mt-5">
         <Row key={props.upcomingMovies.id} row={props.upcomingMovies} content={'movies'} />
         <Row key={props.tvOnAir.id} row={props.tvOnAir} content={'tv'} />
-        {rows}
     </div>
     <Bottom />
     </>
